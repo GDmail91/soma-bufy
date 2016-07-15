@@ -1,0 +1,37 @@
+{
+  "400": {
+    "status": 400,
+    "message": "잘못된 요청입니다.",
+    "description": "Bad Request"
+  },
+
+  "401": {
+    "status": 401,
+    "message": "토큰 인증에 실패하였습니다.",
+    "description": "False token"
+  },
+
+  "404": {
+    "status": 404,
+    "message": "잘못된 주소입니다.",
+    "description": "Bad Request"
+  },
+
+  "500": {
+    "status": 500,
+    "message": "내부 서버 오류",
+    "description": "Internal Server Error"
+  },
+
+  "9401": {
+    "status": 400,
+    "message": "파라미터가 잘못되었습니다.",
+    "description": "invalid parameter"
+  },
+
+  "1401": {
+    "status": 200,
+    "message": "아이디가 중복됩니다.",
+    "description": "Exist Email"
+  }
+}
