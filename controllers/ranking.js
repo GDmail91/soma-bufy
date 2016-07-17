@@ -40,7 +40,7 @@ router.post('/:content_id/likes', function(req, res, next) {
         res.json({
             status: true,
             msg: "좋아요 변경",
-            data: result
+            data: { is_like: result }
         });
     });
 });
