@@ -55,8 +55,6 @@ var users_model = {
                             "ON DUPLICATE KEY UPDATE " +
                             "token = ? ", insert, function (err, rows) {
 
-                            console.log(err);
-                            console.log(rows);
                             if (err) {
                                 connection.rollback(function () {
                                     console.error('rollback error');

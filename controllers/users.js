@@ -38,10 +38,10 @@ router.post('/', function(req, res, next) {
                     field: "id"
                 }
             }, function (err, httpResponse, body) {
-                console.log(body);
                 if (err) return callback("사용자 인증 에러");
 
-                data.user_id = body.id;
+                var fb_profile = JSON.parse(body);
+                data.user_id = fb_profile.id;
                 return callback(null);
             });
         }, function (callback) {
