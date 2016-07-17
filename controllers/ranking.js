@@ -162,6 +162,8 @@ router.post('/', function(req, res, next) {
                     if (status) callback(null, data.content_id);
                     else callback(msg);
                 });
+            } else {
+                callback("유효값 검사 실패")
             }
         }
     ], function(err, result) {

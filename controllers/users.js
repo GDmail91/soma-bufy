@@ -38,7 +38,6 @@ router.post('/', function(req, res, next) {
                     field: "id"
                 }
             }, function (err, httpResponse, body) {
-                console.log(httpResponse);
                 if (err) return callback("사용자 인증 에러");
 
                 var fb_profile = JSON.parse(body);
