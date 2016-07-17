@@ -69,14 +69,16 @@ var ranking_model = {
                         }
 
                     }, function(is_like, tran_callback) {
-                        var update = [];
+                        var update = [data.content_id];
                         var sql;
                         if (is_like) {
                             sql = "UPDATE RankContents SET " +
-                                "`like_count` = like_count - 1 ";
+                                "`like_count` = like_count - 1 " +
+                                "WHERE content_id = ?";
                         } else {
                             sql = "UPDATE RankContents SET " +
-                                "`like_count` = like_count + 1 ";
+                                "`like_count` = like_count + 1 " +
+                                "WHERE content_id = ?";
                         }
 
                         connection.query(sql, update, function (err, rows) {
