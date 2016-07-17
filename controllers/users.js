@@ -38,9 +38,11 @@ router.post('/', function(req, res, next) {
                     field: "id"
                 }
             }, function (err, httpResponse, body) {
+                console.log(httpResponse);
                 if (err) return callback("사용자 인증 에러");
 
                 var fb_profile = JSON.parse(body);
+                if (fb_profile.error) return callback("사용자 인증 에러");
                 data.user_id = fb_profile.id;
                 return callback(null);
             });
