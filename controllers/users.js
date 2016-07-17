@@ -32,7 +32,7 @@ router.post('/', function(req, res, next) {
         }, function (callback) {
             // 유저 상태 인증
             request.get({
-                url: 'https://graph.facebook.com/bgolub?fields=id,name,picture',
+                url: 'https://graph.facebook.com/v2.7/me',
                 qs: {
                     access_token: data.access_token,
                     field: "id"
