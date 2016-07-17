@@ -54,6 +54,7 @@ router.get('/likes', function(req, res, next) {
     async.waterfall([
         function(callback) {
             require('../models/likes_model').getLikesById(data, function(status, msg, data) {
+                console.log(msg);
                 if (status) callback(null, data);
                 else callback(msg);
             });

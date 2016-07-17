@@ -4,6 +4,7 @@
 var credentials = require('../credentials');
 var mysql = require('mysql');
 var pool = mysql.createPool({
+    aquireTimeout   : 60 * 60 * 1000,
     host    : credentials.mysql.host,
     port : credentials.mysql.port,
     user : credentials.mysql.user,
@@ -157,7 +158,7 @@ var ranking_model = {
         });
     },
 
-
+/*
     deleteContent : function (data, callback) {
         // 게시물 삭제
         pool.getConnection(function (err, connection) {
@@ -323,7 +324,7 @@ var ranking_model = {
                 }
             });
         });
-    },
+    },*/
 };
 
 module.exports = ranking_model;

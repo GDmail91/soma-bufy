@@ -4,6 +4,9 @@
 var credentials = require('../credentials');
 var mysql = require('mysql');
 var pool = mysql.createPool({
+    connectTimeout  : 60 * 60 * 1000,
+    timeout         : 60 * 60 * 1000,
+    aquireTimeout   : 60 * 60 * 1000,
     host    : credentials.mysql.host,
     port : credentials.mysql.port,
     user : credentials.mysql.user,
@@ -24,16 +27,36 @@ var users_model = {
                 var async = require('async');
                 async.waterfall([
                     function (tran_callback) {
+                        tran_callback(null);
                         // TODO 기존 사용자 로그인중일시 재로그인 알림
-                        return tran_callback(null);
+                        /*var select = [data.user_id];
+                        connection.query("SELECT user_id, token " +
+                            "FROM User " +
+                            "WHERE user_id = ?", select, function (err, rows) {
+                            if (err) {
+                                connection.rollback(function () {
+                                    console.error('rollback error');
+                                    return tran_callback({result: false, msg: '처리중 오류가 발생했습니다. 원인: ' + err});
+                                });
+                            }
+                            if (rows.length != 0) tran_callback
+
+                            tran_callback(null);
+                        });*/
                     },
                     function (tran_callback) {
-                        var insert = [data.access_token, data.username, data.sns, data.phone];
+                        var insert = [data.user_id, data.access_token, data.username, data.sns, data.phone, data.access_token];
                         connection.query("INSERT INTO User SET " +
+                            "`user_id` = ?, " +
                             "`token` = ?, " +
                             "`username` = ?, " +
                             "`sns` = ?, " +
-                            "`phone` = ? ", insert, function (err, rows) {
+                            "`phone` = ? " +
+                            "ON DUPLICATE KEY UPDATE " +
+                            "token = ? ", insert, function (err, rows) {
+
+                            console.log(err);
+                            console.log(rows);
                             if (err) {
                                 connection.rollback(function () {
                                     console.error('rollback error');

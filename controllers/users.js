@@ -3,6 +3,7 @@
  */
 var express = require('express');
 var router = express.Router();
+var request = require('request');
 var async = require('async');
 
 /* POST user registration. */
@@ -20,17 +21,35 @@ router.post('/', function(req, res, next) {
             var validation = /[a-힣]/;
             var Validator = require('validator');
 
-            if(validation.test(data.username)  // character only
+            if (validation.test(data.username)  // character only
                 && Validator.isAlphanumeric(data.access_token) // token only
                 && Validator.isAlpha(data.sns)  // alphabet only
                 && Validator.isNumeric(data.phone)) { // number only
 
-                // 유저 인증정보 저장
-                require('../models/users_model').joinCheck(data, function (status, msg, data) {
-                    if (status) callback(null, data.user_id);
-                    else callback(msg);
-                });
+                return callback(null);
             }
+            return callback("유효성 검사 실패");
+        }, function (callback) {
+            // 유저 상태 인증
+            request.get({
+                url: 'https://graph.facebook.com/bgolub?fields=id,name,picture',
+                qs: {
+                    access_token: data.access_token,
+                    field: "id"
+                }
+            }, function (err, httpResponse, body) {
+                console.log(body);
+                if (err) return callback("사용자 인증 에러");
+
+                data.user_id = body.id;
+                return callback(null);
+            });
+        }, function (callback) {
+            // 유저 인증정보 저장
+            require('../models/users_model').joinCheck(data, function (status, msg, data) {
+                if (status) callback(null, data.user_id);
+                else callback(msg);
+            });
         }
     ], function(err, result) {
         if (err) {

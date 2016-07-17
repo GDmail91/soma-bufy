@@ -4,6 +4,7 @@
 var credentials = require('../credentials');
 var mysql = require('mysql');
 var pool = mysql.createPool({
+    aquireTimeout   : 60 * 60 * 1000,
     host    : credentials.mysql.host,
     port : credentials.mysql.port,
     user : credentials.mysql.user,
@@ -72,7 +73,7 @@ var ranking_model = {
                 var async = require('async');
                 async.waterfall([
                     function (tran_callback) {
-                        // TODO 기존 사용자 로그인중일시 재로그인 알림
+                        // TODO 게시물 권한 확인
                         var select = [data.access_token];
                         connection.query("SELECT content_id " +
                             "FROM RankContents " +

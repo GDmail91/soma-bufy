@@ -10,7 +10,7 @@ module.exports = function(app){
   //app.use('/auth', auth);
   app.use('/users', users);
   app.use('/ranking', ranking);
-  app.use('/', ranking);
+  //app.use('/', ranking);
   //app.use('/monthly', monthly);
   //app.use('/reviews', reviews);
   //app.use('/search', search);
