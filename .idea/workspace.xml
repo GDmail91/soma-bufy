@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="050da517-aae0-4612-82f3-90a2babe754e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/routes/users.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/ranking_model.js" afterPath="$PROJECT_DIR$/models/ranking_model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/ranking.js" afterPath="$PROJECT_DIR$/controllers/ranking.js" />
     </list>
     <ignored path="qinshihuang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ranking.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ranking.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/ranking.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.7862069">
+              <caret line="207" column="59" selection-start-line="207" selection-start-column="59" selection-end-line="207" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -89,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ranking_model.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ranking_model.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/ranking_model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.2098322">
-              <caret line="210" column="20" selection-start-line="210" selection-start-column="20" selection-end-line="210" selection-end-column="20" />
+            <state vertical-scroll-proportion="-11.944445">
+              <caret line="110" column="49" selection-start-line="110" selection-start-column="48" selection-end-line="110" selection-end-column="49" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -406,7 +405,13 @@
       <option name="project" value="LOCAL" />
       <updated>1468781124433</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Change standard rank sorting">
+      <created>1468814651361</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1468814651361</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -457,7 +462,8 @@
     <MESSAGE value="Change raking validation control" />
     <MESSAGE value="Change data of response like action" />
     <MESSAGE value="Fix like count bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix like count bug" />
+    <MESSAGE value="Change standard rank sorting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change standard rank sorting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -588,14 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ranking.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/likes_model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -608,11 +606,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/ranking_model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2098322">
-          <caret line="210" column="20" selection-start-line="210" selection-start-column="20" selection-end-line="210" selection-end-column="20" />
+        <state vertical-scroll-proportion="-11.944445">
+          <caret line="110" column="49" selection-start-line="110" selection-start-column="48" selection-end-line="110" selection-end-column="49" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/ranking.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7862069">
+          <caret line="207" column="59" selection-start-line="207" selection-start-column="59" selection-end-line="207" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
