@@ -207,11 +207,11 @@ var ranking_model = {
             }
             if (data.start_id == undefined) {
                 select.push(data.amount);
-                sql += "ORDER BY post_date DESC LIMIT ? ";
+                sql += "WHERE is_finish = 0 ORDER BY like_count DESC, view_count DESC LIMIT ? ";
             } else {
                 select.push(data.start_id);
                 select.push(data.amount);
-                sql += "WHERE content_id <= ? ORDER BY post_date DESC LIMIT ? ";
+                sql += "WHERE is_finish = 0 AND content_id <= ? ORDER BY like_count DESC, view_count DESC LIMIT ? ";
             }
 
             connection.query(sql, select, function (err, rows) {
