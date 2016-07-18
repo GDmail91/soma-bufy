@@ -16,10 +16,12 @@ router.post('/', function(req, res, next) {
         function(callback) {
             // 유효성 검사
             var Validator = require('validator');
-            if (Validator.isEmail(data.email)) { // email only
-                return callback(null);
-            }
-            return callback("유효성 검사 실패");
+
+            if (typeof data.email == 'undefined')
+                return callback("유효성 검사 실패");
+            if (!Validator.isEmail(data.email)) // email only
+                return callback("유효성 검사 실패");
+            return callback(null);
         },
         function(callback) {
             // 관리자 인증
