@@ -279,24 +279,24 @@ var users_model = {
      * @param data (JSON) : access_token
      * @param callback (Function)
      */
-    get_admin_id : function (data, callback) {
+    get_editable_admin_id : function (data, callback) {
         // 관리자 인증
         pool.getConnection(function (err, connection) {
             if (err) return callback({result: false, msg: "사용자 정보를 가져오는데 실패했습니다. 원인: " + err});
             var select = [data.access_token];
-            connection.query("SELECT users_id, admin FROM Users WHERE facebook_access_token = ?", select, function (err, rows) {
+            connection.query("SELECT admin_user_id " +
+                "FROM Admin " +
+                "WHERE level >= 0 AND admin_user_id = (SELECT user_id FROM User WHERE token = ?)", select, function (err, rows) {
                 if (err) {
                     connection.release();
-                    return callback({result: false, msg: "사용자 정보를 가져오는데 실패했습니다. 원인: " + err});
+                    return callback(false, "사용자 정보를 가져오는데 실패했습니다. 원인: " + err);
                 }
                 connection.release();
                 if (rows.length != 0) {
-                    if (rows[0].admin) {
-                        return callback({result: true, msg: "사용자 정보 가져왔습니다.", data: {users_id: rows[0].users_id}});
-                    }
+                    return callback(true, "관리자 인증 완료.", { user_id: rows[0].admin_user_id });
 
                 }
-                return callback({result: false, msg: '잘못된 접근입니다.'});
+                return callback(false, '잘못된 접근입니다.');
             });
         });
     }

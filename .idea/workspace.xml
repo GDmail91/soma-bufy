@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="050da517-aae0-4612-82f3-90a2babe754e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/monthly_model.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/ranking.js" afterPath="$PROJECT_DIR$/controllers/ranking.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/monthly.js" afterPath="$PROJECT_DIR$/controllers/monthly.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/users_model.js" afterPath="$PROJECT_DIR$/models/users_model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
     </list>
     <ignored path="qinshihuang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/models/users_model.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="87" column="29" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
+              <caret line="294" column="39" selection-start-line="294" selection-start-column="39" selection-end-line="294" selection-end-column="39" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -56,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ranking.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ranking.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/ranking.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7862069">
-              <caret line="207" column="59" selection-start-line="207" selection-start-column="59" selection-end-line="207" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -70,8 +73,22 @@
         <entry file="file://$PROJECT_DIR$/controllers/monthly.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
+              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#39#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="monthly_model.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/monthly_model.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.41538462">
+              <caret line="77" column="41" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#39#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,8 +108,8 @@
       <file leaf-file-name="ranking_model.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/ranking_model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.944445">
-              <caret line="110" column="49" selection-start-line="110" selection-start-column="48" selection-end-line="110" selection-end-column="49" />
+            <state vertical-scroll-proportion="-2.5833333">
+              <caret line="232" column="4" selection-start-line="232" selection-start-column="4" selection-end-line="264" selection-end-column="6" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -103,8 +120,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.029412">
-              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+            <state vertical-scroll-proportion="-3.9117646">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -142,18 +159,19 @@
         <option value="$PROJECT_DIR$/controllers/search.js" />
         <option value="$PROJECT_DIR$/controllers/contact.js" />
         <option value="$PROJECT_DIR$/controllers/auth.js" />
-        <option value="$PROJECT_DIR$/controllers/monthly.js" />
         <option value="$PROJECT_DIR$/routes/routes.js" />
         <option value="$PROJECT_DIR$/routes/errorCode.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/credentials.js" />
-        <option value="$PROJECT_DIR$/models/users_model.js" />
         <option value="$PROJECT_DIR$/controllers/users.js" />
         <option value="$PROJECT_DIR$/models/likes_model.js" />
-        <option value="$PROJECT_DIR$/controllers/ranking.js" />
         <option value="$PROJECT_DIR$/models/ranking_model.js" />
+        <option value="$PROJECT_DIR$/controllers/ranking.js" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/models/users_model.js" />
+        <option value="$PROJECT_DIR$/controllers/monthly.js" />
+        <option value="$PROJECT_DIR$/models/monthly_model.js" />
       </list>
     </option>
   </component>
@@ -163,10 +181,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="y" value="1" />
-    <option name="width" value="1932" />
-    <option name="height" value="1036" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -411,7 +429,19 @@
       <option name="project" value="LOCAL" />
       <updated>1468814651361</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Change output of editing ranking content">
+      <created>1468819696642</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1468819696642</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fix mistake">
+      <created>1468819960811</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1468819960811</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -424,16 +454,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="1" width="1932" height="1036" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18652038" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18802084" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896176" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32459018" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896176" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -463,7 +493,9 @@
     <MESSAGE value="Change data of response like action" />
     <MESSAGE value="Fix like count bug" />
     <MESSAGE value="Change standard rank sorting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change standard rank sorting" />
+    <MESSAGE value="Change output of editing ranking content" />
+    <MESSAGE value="Fix mistake" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix mistake" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -560,32 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/users_model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="29" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.029412">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/monthly.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/users.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -604,21 +610,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/ranking_model.js">
+    <entry file="file://$PROJECT_DIR$/controllers/ranking.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.944445">
-          <caret line="110" column="49" selection-start-line="110" selection-start-column="48" selection-end-line="110" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9117646">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/users_model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="294" column="39" selection-start-line="294" selection-start-column="39" selection-end-line="294" selection-end-column="39" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ranking.js">
+    <entry file="file://$PROJECT_DIR$/models/ranking_model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7862069">
-          <caret line="207" column="59" selection-start-line="207" selection-start-column="59" selection-end-line="207" selection-end-column="59" />
-          <folding />
+        <state vertical-scroll-proportion="-2.5833333">
+          <caret line="232" column="4" selection-start-line="232" selection-start-column="4" selection-end-line="264" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/monthly.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/monthly_model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41538462">
+          <caret line="77" column="41" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

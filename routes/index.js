@@ -11,7 +11,7 @@ module.exports = function(app){
   app.use('/users', users);
   app.use('/ranking', ranking);
   //app.use('/', ranking);
-  //app.use('/monthly', monthly);
+  app.use('/monthly', monthly);
   //app.use('/reviews', reviews);
   //app.use('/search', search);
   //app.use('/contact', contact);
