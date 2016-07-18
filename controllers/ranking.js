@@ -222,7 +222,7 @@ router.put('/:content_id', function(req, res, next) {
         res.statusCode = 200;
         res.json({
             status: true,
-            msg: "수정 완료"
+            msg: "수정 완료",
             data: { content_id : data.content_id }
         });
     });
