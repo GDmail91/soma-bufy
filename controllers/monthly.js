@@ -15,8 +15,6 @@ router.post('/', function(req, res, next) {
         end_date : req.body.end_date
     };
 
-    if (isNaN(data.amount)) data.amount = 10;
-
     async.waterfall([
         function(callback) {
             // 관리자 인증
@@ -28,9 +26,7 @@ router.post('/', function(req, res, next) {
             });
         },
         function(callback) {
-            // TODO 게시물 리스트 가져옴
             require('../models/monthly_model').postMonthlyContent(data, function(status, msg, data) {
-                console.log(msg);
                 if (status) callback(null, data);
                 else callback(msg);
             });
