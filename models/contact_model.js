@@ -25,10 +25,11 @@ var monthly_model = {
                 var async = require('async');
                 async.waterfall([
                     function (tran_callback) {
-                        var insert = [data.access_token, data.question];
+                        var insert = [data.access_token, data.question, data.email];
                         connection.query("INSERT INTO Contact SET " +
                             "`contact_user_id` = (SELECT user_id FROM User WHERE token = ?), " +
                             "`question` = ?, " +
+                            "`email` = ?, " +
                             "`post_date` = NOW() ", insert, function (err) {
                             if (err) {
                                 connection.rollback(function () {

@@ -8,10 +8,19 @@ var async = require('async');
 router.post('/', function(req, res, next) {
     var data = {
         access_token : req.header('access-token'),
-        question : req.body.question
+        question : req.body.question,
+        email : req.body.email
     };
 
     async.waterfall([
+        function(callback) {
+            // 유효성 검사
+            var Validator = require('validator');
+            if (Validator.isEmail(data.email)) { // email only
+                return callback(null);
+            }
+            return callback("유효성 검사 실패");
+        },
         function(callback) {
             // 관리자 인증
             require('../models/contact_model').postQuestion(data, function(status, msg) {
