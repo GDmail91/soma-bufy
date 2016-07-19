@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // route handlers
 
-require('./routes/index')(app);
+require('./routes/route')(app);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

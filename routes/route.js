@@ -5,6 +5,7 @@ var monthly = require('../controllers/monthly');
 var reviews = require('../controllers/reviews');
 var search = require('../controllers/search');
 var contact = require('../controllers/contact');
+var upload = require('../controllers/upload');
 
 module.exports = function(app){
   //app.use('/auth', auth);
@@ -15,4 +16,5 @@ module.exports = function(app){
   //app.use('/reviews', reviews);
   //app.use('/search', search);
   app.use('/contact', contact);
+  app.use('/upload', upload);
 };
