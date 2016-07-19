@@ -1,51 +1,9 @@
 /**
  * Created by YS on 2016-07-19.
  */
-var express = require('express');
-var router = express.Router();
-var async = require('async');
 var credentials = require('../credentials');
 
-/* POST image listing */
-router.post('/image', function(req, res, next) {
-    var data = {
-        access_token : req.header('access-token'),
-        user_id : null
-    };
-
-    var async = require('async');
-    async.waterfall([
-        function(callback) {
-            // 유저 확인
-            require('../models/users_model').getUserDataByToken(data, function (status, msg, data) {
-                if (status) {
-                    this.data.user_id = data.user_id;
-                    callback(null);
-                } else callback(msg);
-            });
-        }, function(callback) {
-            uploadAws(req, data, function(status, msg, data) {
-                if(status) {
-                    callback(null, data);
-                } else return callback(msg);
-            });
-        }
-    ], function(err, result) {
-        if (err) {
-            var error = new Error('Not Found');
-            error.status = 400;
-            console.error(err);
-            return next(error);
-        }
-        res.statusCode = 200;
-        res.json({
-            status: true,
-            msg: "업로드 완료"
-        });
-    });
-});
-
-function uploadAws(req, data, callback) {
+function uploadImage(req, data, callback) {
     var formidable = require('formidable');
     var form = new formidable.IncomingForm();
 
@@ -61,9 +19,8 @@ function uploadAws(req, data, callback) {
         var gm = require('gm').subClass({ imageMagick: true });
         var buffer = new Buffer(0);
 
-        console.log(files);
         // Read in the file, convert it to base64, store to S3
-        var fileStream = fs.createReadStream(files.somefile.path);
+        var fileStream = fs.createReadStream(files.content_img.path);
         fileStream.on('error', function (err) {
             if (err) {
                 throw err;
@@ -83,7 +40,7 @@ function uploadAws(req, data, callback) {
             // image name hashing
             var crypto = require('crypto');
             var salt = Math.round((new Date().valueOf() * Math.random())) + "";
-            var image_name = crypto.createHash("sha256").update(files.somefile.name + salt).digest("hex");
+            var image_name = crypto.createHash("sha256").update(files.content_img.name + salt).digest("hex");
 
             // bucket info & file info
             var bucketName = 'soma-bufy-storage';
@@ -118,13 +75,13 @@ function uploadAws(req, data, callback) {
                         });
                     });
                 // Rest API 사진정보 전송
-                var data = {
+                var dummy_data = {
                     image_url: keyName,
-                    image_name: files.somefile.name,
+                    image_name: files.content_img.name,
                     author: data.user_id
                 };
 
-                callback(true, "업로드 완료", data);
+                callback(true, "업로드 완료", dummy_data);
                 // TODO 저장하는 프로세스
                 /*request.post({
                  url: credentials.api_server+'/cards/images',
@@ -149,4 +106,4 @@ function uploadAws(req, data, callback) {
         });
     });
 }
-module.exports = router;
+module.exports = uploadImage;

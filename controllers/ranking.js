@@ -156,15 +156,34 @@ router.post('/', function(req, res, next) {
             var Validator = require('validator');
             if(validation.test(data.content_title) // alphabet, numeric or korean only
                 && Validator.isURL(data.content_img)) { // alphanumeric only
-
-                // 게시물 등록
-                require('../models/ranking_model').postContent(data, function (status, msg, data) {
-                    if (status) callback(null, data.content_id);
-                    else callback(msg);
-                });
+                callback(null);
             } else {
                 callback("유효값 검사 실패")
             }
+        }, function(callback) {
+            // 유저 확인
+            require('../models/users_model').getUserDataByToken(data, function (status, msg, getData) {
+                if (status) {
+                    data.user_id = getData.user_id;
+                    callback(null);
+                } else callback(msg);
+            });
+        }, function(callback) {
+            require('./upload')(req, data, function(status, msg, getData) {
+                if (status) {
+                    data.content_img = getData.image_url;
+                    // 이름이 필요한가?
+                    //data.content_img_name = getData.image_name;
+                    callback(null);
+                }
+                else callback(msg);
+            });
+        }, function(callback) {
+            // 게시물 등록
+            require('../models/ranking_model').postContent(data, function (status, msg, data) {
+                if (status) callback(null, data.content_id);
+                else callback(msg);
+            });
         }
     ], function(err, result) {
         if (err) {
@@ -203,13 +222,34 @@ router.put('/:content_id', function(req, res, next) {
             var Validator = require('validator');
             if(validation.test(data.content_title) // alphabet, numeric or korean only
                 && Validator.isURL(data.content_img)) { // alphanumeric only
-
-                // 게시물 수정 정보 저장
-                require('../models/ranking_model').putContent(data, function (status, msg) {
-                    if (status) callback(null);
-                    else callback(msg);
-                });
+                callback(null);
+            } else {
+                callback("유효값 검사 실패")
             }
+        }, function(callback) {
+            // 유저 확인
+            require('../models/users_model').getUserDataByToken(data, function (status, msg, getData) {
+                if (status) {
+                    data.user_id = getData.user_id;
+                    callback(null);
+                } else callback(msg);
+            });
+        }, function(callback) {
+            require('./upload')(req, data, function(status, msg, getData) {
+                if (status) {
+                    data.content_img = getData.image_url;
+                    // 이름이 필요한가?
+                    //data.content_img_name = getData.image_name;
+                    callback(null);
+                }
+                else callback(msg);
+            });
+        }, function(callback) {
+            // 게시물 수정 정보 저장
+            require('../models/ranking_model').putContent(data, function (status, msg) {
+                if (status) callback(null);
+                else callback(msg);
+            });
         }
     ], function(err) {
         if (err) {

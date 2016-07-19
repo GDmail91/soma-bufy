@@ -196,7 +196,7 @@ var users_model = {
                     dummy_data = {
                         result: true,
                         msg: "사용자 정보 가져옴",
-                        data: rows
+                        data: rows[0]
                     };
                 } else {
                     dummy_data = {
