@@ -143,7 +143,7 @@ router.get('/', function(req, res, next) {
 /* POST ranking content */
 router.post('/', function(req, res, next) {
     var data = {
-        'access_token' : req.header('access-token'),
+        'access_token' : req.header('access-token')
         // body-parser cannot catch multipart
         //content_title : req.body.content_title,
         //description : req.body.description
@@ -169,7 +169,7 @@ router.post('/', function(req, res, next) {
             });
         }, function(callback) {
             // use formidable for multipart data
-            require('./upload')(req, data, function(status, msg, getData) {
+            require('./aws').uploadImage(req, data, function(status, msg, getData) {
                 if (status) {
                     data.content_title = getData.content_title;
                     data.description = getData.description;
@@ -211,19 +211,15 @@ router.post('/', function(req, res, next) {
 router.put('/:content_id', function(req, res, next) {
     var data = {
         access_token : req.header('access-token'),
-        content_id : req.params.content_id,
-        content_title : req.body.content_title,
-        description : req.body.description,
-        content_img : req.body.content_img
+        content_id : req.params.content_id
     };
-
+    var ranking_model = require('../models/ranking_model');
     async.waterfall([
         function(callback) {
             // 유효성 검사
             var validation = /[0-9a-힣]/;
             var Validator = require('validator');
-            if(validation.test(data.content_title) // alphabet, numeric or korean only
-                && Validator.isURL(data.content_img)) { // alphanumeric only
+            if(validation.test(data.content_title)) { // alphabet, numeric or korean only
                 callback(null);
             } else {
                 callback("유효값 검사 실패")
@@ -237,8 +233,17 @@ router.put('/:content_id', function(req, res, next) {
                 } else callback(msg);
             });
         }, function(callback) {
-            require('./upload')(req, data, function(status, msg, getData) {
+            ranking_model.getContentDataById(data, function(status, msg, getData) {
                 if (status) {
+                    callback(null, getData.content_img);
+                } else callback(msg);
+            });
+        }, function(content_img, callback) {
+            // use formidable for multipart data
+            require('./aws').overwriteImage(req, data, content_img, function(status, msg, getData) {
+                if (status) {
+                    data.content_title = getData.content_title;
+                    data.description = getData.description;
                     data.content_img = getData.image_url;
                     // 이름이 필요한가?
                     //data.content_img_name = getData.image_name;
@@ -248,7 +253,7 @@ router.put('/:content_id', function(req, res, next) {
             });
         }, function(callback) {
             // 게시물 수정 정보 저장
-            require('../models/ranking_model').putContent(data, function (status, msg) {
+                ranking_model.putContent(data, function (status, msg) {
                 if (status) callback(null);
                 else callback(msg);
             });
