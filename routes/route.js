@@ -8,13 +8,13 @@ var contact = require('../controllers/contact');
 var upload = require('../controllers/upload');
 
 module.exports = function(app){
-  //app.use('/auth', auth);
-  app.use('/users', users);
-  app.use('/ranking', ranking);
-  //app.use('/', ranking);
-  app.use('/monthly', monthly);
   //app.use('/reviews', reviews);
   //app.use('/search', search);
+  //app.use('/auth', auth);
+  //app.use('/', ranking);
+  app.use('/monthly', monthly);
+  app.use('/users', users);
+  app.use('/ranking', ranking);
   app.use('/contact', contact);
   app.use('/upload', upload);
 };

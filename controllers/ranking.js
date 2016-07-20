@@ -145,8 +145,7 @@ router.post('/', function(req, res, next) {
     var data = {
         'access_token' : req.header('access-token'),
         content_title : req.body.content_title,
-        description : req.body.description,
-        content_img : req.body.content_img
+        description : req.body.description
     };
 
     async.waterfall([
