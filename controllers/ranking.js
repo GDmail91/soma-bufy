@@ -144,8 +144,9 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
     var data = {
         'access_token' : req.header('access-token'),
-        content_title : req.body.content_title,
-        description : req.body.description
+        // body-parser cannot catch multipart
+        //content_title : req.body.content_title,
+        //description : req.body.description
     };
 
     async.waterfall([
@@ -156,7 +157,7 @@ router.post('/', function(req, res, next) {
             if(validation.test(data.content_title)) {  // alphabet, numeric or korean only
                 callback(null);
             } else {
-                callback("유효값 검사 실패")
+                callback("유효값 검사 실패");
             }
         }, function(callback) {
             // 유저 확인
@@ -167,8 +168,11 @@ router.post('/', function(req, res, next) {
                 } else callback(msg);
             });
         }, function(callback) {
+            // use formidable for multipart data
             require('./upload')(req, data, function(status, msg, getData) {
                 if (status) {
+                    data.content_title = getData.content_title;
+                    data.description = getData.description;
                     data.content_img = getData.image_url;
                     // 이름이 필요한가?
                     //data.content_img_name = getData.image_name;

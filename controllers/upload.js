@@ -13,6 +13,9 @@ function uploadImage(req, data, callback) {
             callback(false, "err");
         }
 
+        console.log(files);
+        console.log(fields);
+
         // S3 서버에 이미지 업로드 ##
         var AWS = require('aws-sdk');
         var fs = require('fs');
@@ -78,7 +81,9 @@ function uploadImage(req, data, callback) {
                 var dummy_data = {
                     image_url: keyName,
                     image_name: files.content_img.name,
-                    author: data.user_id
+                    author: data.user_id,
+                    content_title: fields.content_title,
+                    description: fields.description
                 };
 
                 callback(true, "업로드 완료", dummy_data);
