@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="050da517-aae0-4612-82f3-90a2babe754e" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/controllers/upload.js" afterPath="$PROJECT_DIR$/controllers/aws.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/aws.js" afterPath="$PROJECT_DIR$/controllers/aws.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/ranking.js" afterPath="$PROJECT_DIR$/controllers/ranking.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/route.js" afterPath="$PROJECT_DIR$/routes/route.js" />
     </list>
     <ignored path="qinshihuang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,13 +28,17 @@
       <file leaf-file-name="ranking.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/ranking.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.0458716">
-              <caret line="173" column="63" selection-start-line="173" selection-start-column="63" selection-end-line="173" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.65068495">
+              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
               <folding>
                 <element signature="e#223#1340#0" expanded="false" />
                 <element signature="e#1391#2112#0" expanded="false" />
                 <element signature="e#2170#2946#0" expanded="false" />
                 <element signature="e#2991#3844#0" expanded="false" />
+                <element signature="e#3917#6052#0" expanded="false" />
+                <element signature="e#6149#8494#0" expanded="false" />
+                <element signature="e#8596#9342#0" expanded="false" />
+                <element signature="e#9398#10203#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -67,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/controllers/aws.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="21" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="21" />
+              <caret line="212" column="23" selection-start-line="212" selection-start-column="23" selection-end-line="212" selection-end-column="23" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -489,7 +492,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469008123825</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Add Overwriting image of already posted when put content">
+      <created>1469027674323</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1469027674323</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -511,7 +520,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281768" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.80221" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.80221" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281768" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18756531" sideWeight="0.51955307" order="2" side_tool="true" content_ui="tabs" />
@@ -568,7 +577,8 @@
     <MESSAGE value="Add upload process" />
     <MESSAGE value="Fix upload process" />
     <MESSAGE value="Delete console.log, And add encoding" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete console.log, And add encoding" />
+    <MESSAGE value="Add Overwriting image of already posted when put content" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Overwriting image of already posted when put content" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -584,6 +594,10 @@
             <element signature="e#1391#2112#0" expanded="false" />
             <element signature="e#2170#2946#0" expanded="false" />
             <element signature="e#2991#3844#0" expanded="false" />
+            <element signature="e#3917#6052#0" expanded="false" />
+            <element signature="e#6149#8494#0" expanded="false" />
+            <element signature="e#8596#9342#0" expanded="false" />
+            <element signature="e#9398#10203#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -679,6 +693,10 @@
             <element signature="e#1391#2112#0" expanded="false" />
             <element signature="e#2170#2946#0" expanded="false" />
             <element signature="e#2991#3844#0" expanded="false" />
+            <element signature="e#3917#6052#0" expanded="false" />
+            <element signature="e#6149#8494#0" expanded="false" />
+            <element signature="e#8596#9342#0" expanded="false" />
+            <element signature="e#9398#10203#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -971,7 +989,7 @@
     <entry file="file://$PROJECT_DIR$/controllers/aws.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="21" />
+          <caret line="212" column="23" selection-start-line="212" selection-start-column="23" selection-end-line="212" selection-end-column="23" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
           </folding>
@@ -980,13 +998,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/ranking.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0458716">
-          <caret line="173" column="63" selection-start-line="173" selection-start-column="63" selection-end-line="173" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.65068495">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
           <folding>
             <element signature="e#223#1340#0" expanded="false" />
             <element signature="e#1391#2112#0" expanded="false" />
             <element signature="e#2170#2946#0" expanded="false" />
             <element signature="e#2991#3844#0" expanded="false" />
+            <element signature="e#3917#6052#0" expanded="false" />
+            <element signature="e#6149#8494#0" expanded="false" />
+            <element signature="e#8596#9342#0" expanded="false" />
+            <element signature="e#9398#10203#0" expanded="false" />
           </folding>
         </state>
       </provider>

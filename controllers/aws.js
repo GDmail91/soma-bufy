@@ -208,5 +208,27 @@ function overwriteImage(req, data, origin_url, callback) {
     });
 }
 
+function getImage(content_img, res) {
+    var AWS = require('aws-sdk');
+    AWS.config.update({
+        accessKeyId: credentials.aws.aws_access_key_id,
+        secretAccessKey: credentials.aws.aws_secret_access_key,
+        "region": "ap-northeast-2"
+    });
+
+    // bucket info & file info
+    var bucketName = 'soma-bufy-storage';
+    var keyName = 'images/'+content_img;
+
+    var s3 = new AWS.S3();
+
+    res.writeHead(200, {'Content-Type': 'image/*' });
+    s3.getObject({
+        Bucket: bucketName,
+        Key: keyName,
+    }).createReadStream().pipe(res);
+}
+
 module.exports.uploadImage = uploadImage;
 module.exports.overwriteImage = overwriteImage;
+module.exports.getImage = getImage;

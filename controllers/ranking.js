@@ -342,4 +342,8 @@ router.get('/:content_id', function(req, res, next) {
     });
 });
 
+router.get('/:content_id/image', function(req, res, next) {
+    require('./aws').getImage(req.query.content_img, res);
+});
+
 module.exports = router;
