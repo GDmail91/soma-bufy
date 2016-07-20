@@ -6,15 +6,13 @@ var credentials = require('../credentials');
 function uploadImage(req, data, callback) {
     var formidable = require('formidable');
     var form = new formidable.IncomingForm();
+    form.encoding('utf-8');
 
     // 파일 폼 파싱 ##
     form.parse(req, function(err, fields, files) {
         if (err) {
             callback(false, "err");
         }
-
-        console.log(files);
-        console.log(fields);
 
         // S3 서버에 이미지 업로드 ##
         var AWS = require('aws-sdk');
@@ -87,26 +85,6 @@ function uploadImage(req, data, callback) {
                 };
 
                 callback(true, "업로드 완료", dummy_data);
-                // TODO 저장하는 프로세스
-                /*request.post({
-                 url: credentials.api_server+'/cards/images',
-                 form: form
-                 }, function optionalCallback(err, httpResponse, body) {
-                 if (err) {
-                 return res.send(err);
-                 }
-                 var getObj = JSON.parse(body);
-
-                 res.render('upload/upload_process', {
-                 title: 'Result Page',
-                 isLogin: req.session.isLogin,
-                 isAdmin: req.session.isAdmin,
-                 host: credentials.host_server,
-                 msg: getObj.msg,
-                 image_id: getObj.data,
-                 img: req.query.img,
-                 });
-                 });*/
             });
         });
     });
