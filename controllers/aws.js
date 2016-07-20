@@ -26,6 +26,9 @@ function uploadImage(req, data, callback) {
             case 'image/png':
                 mime_type = '.png';
                 break;
+            default:
+                return callback(false, "이미지 타입 없음");
+                break;
         }
 
         // S3 서버에 이미지 업로드
@@ -132,6 +135,9 @@ function overwriteImage(req, data, origin_url, callback) {
                 break;
             case 'image/png':
                 mime_type = '.png';
+                break;
+            default:
+                return callback(false, "이미지 타입 없음");
                 break;
         }
 
