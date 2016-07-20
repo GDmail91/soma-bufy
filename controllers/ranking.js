@@ -153,8 +153,7 @@ router.post('/', function(req, res, next) {
             // 유효성 검사
             var validation = /[0-9a-힣]/;
             var Validator = require('validator');
-            if(validation.test(data.content_title) // alphabet, numeric or korean only
-                && Validator.isURL(data.content_img)) { // alphanumeric only
+            if(validation.test(data.content_title)) {  // alphabet, numeric or korean only
                 callback(null);
             } else {
                 callback("유효값 검사 실패")
