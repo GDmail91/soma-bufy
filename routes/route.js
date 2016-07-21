@@ -5,7 +5,7 @@ var monthly = require('../controllers/monthly');
 var reviews = require('../controllers/reviews');
 var search = require('../controllers/search');
 var contact = require('../controllers/contact');
-var import_credit = require('../controllers/import');
+var import_credit = require('../controllers/support');
 
 module.exports = function(app){
   //app.use('/reviews', reviews);
