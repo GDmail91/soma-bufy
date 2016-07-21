@@ -35,7 +35,9 @@ router.get('/:content_id', function(req, res, next) {
             return next(error);
         }
         var currentdate = new Date();
-        var date = currentdate.getFullYear()+""+currentdate.getDate()+""+(currentdate.getMonth()+1);
+        var month = currentdate.getMonth()+1;
+        if (month < 10) month = "0"+month;
+        var date = currentdate.getFullYear()+""+month+""+currentdate.getDate();
         res.statusCode = 200;
         res.render('support', { support_id: data.support_id, username: data.username, target: data.target, date: date.toString() });
     });
