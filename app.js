@@ -26,6 +26,9 @@ app.use(device.capture());
 var browser = require('./routes/browserCheck');
 
 app.get('/redirect', function(req, res, next) {
+  if (req.originalUrl.split('/')[1] != 'redirect') {
+    return next();
+  }
   res.render('redirection', { origin: req.query.origin });
 });
 

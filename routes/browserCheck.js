@@ -12,6 +12,8 @@ function ensureLatestBrowser(req, res, next) {
     var browserVersion = fullBrowserVersion.split(".",1).toString();
     var browserVersionNumber = Number(browserVersion);
 
+    console.log(browserName);
+
     if (browserName == 'IE')
         res.redirect('/redirect?origin='+req.originalUrl);
     else if (browserName == 'Firefox')
