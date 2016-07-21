@@ -1,5 +1,4 @@
 var auth = require('../controllers/auth/auth');
-var mobile = require('../controllers/switch_mobile');
 var users = require('../controllers/users');
 var ranking = require('../controllers/ranking');
 var monthly = require('../controllers/monthly');
@@ -13,7 +12,6 @@ module.exports = function(app){
   //app.use('/search', search);
   //app.use('/auth', auth);
   //app.use('/', ranking);
-  app.use('/', mobile);
   app.use('/monthly', monthly);
   app.use('/users', users);
   app.use('/ranking', ranking);

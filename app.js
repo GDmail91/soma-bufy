@@ -23,11 +23,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(device.capture());
 
 // route handlers
-if (device.type == 'phone') {
-  require('./routes/route')(app);
-} else {
-  require('./routes/redirect')(app);
-}
+var browser = require('./routes/browserCheck');
+
+app.get('/redirect', function(req, res, next) {
+  res.render('redirection');
+});
+
+app.all('*', function(req, res, next) {
+  console.log("실행안해?");
+  browser(req, res, next);
+});
+
+require('./routes/route')(app);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
