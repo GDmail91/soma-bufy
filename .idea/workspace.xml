@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="050da517-aae0-4612-82f3-90a2babe754e" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/controllers/import.js" afterPath="$PROJECT_DIR$/controllers/support.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/import.ejs" afterPath="$PROJECT_DIR$/views/support.ejs" />
+    <list default="true" id="050da517-aae0-4612-82f3-90a2babe754e" name="Default" comment="Change support by cash">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/route.js" afterPath="$PROJECT_DIR$/routes/route.js" />
     </list>
@@ -44,10 +42,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="support.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="support.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/support.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7821101">
+            <state vertical-scroll-proportion="0.0">
               <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
@@ -130,11 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="route.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="route.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/route.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.058824">
-              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.40811455">
+              <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -189,9 +187,9 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/controllers/ranking.js" />
         <option value="$PROJECT_DIR$/controllers/aws.js" />
-        <option value="$PROJECT_DIR$/routes/route.js" />
         <option value="$PROJECT_DIR$/views/import.ejs" />
         <option value="$PROJECT_DIR$/controllers/import.js" />
+        <option value="$PROJECT_DIR$/routes/route.js" />
       </list>
     </option>
   </component>
@@ -572,7 +570,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469082972346</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Change support by cash">
+      <created>1469083121039</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1469083121039</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView">
@@ -655,7 +659,8 @@
     <MESSAGE value="Add get image" />
     <MESSAGE value="Add check no mime type" />
     <MESSAGE value="Add support by cash" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add support by cash" />
+    <MESSAGE value="Change support by cash" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change support by cash" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1061,14 +1066,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.058824">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.441176">
@@ -1103,11 +1100,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/support.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7821101">
+        <state vertical-scroll-proportion="0.0">
           <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40811455">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
