@@ -4,7 +4,6 @@
 var UAParser = require('ua-parser-js');
 
 function ensureLatestBrowser(req, res, next) {
-    console.log(req.header('user-agent'));
 
     var parser = new UAParser();
     var ua = req.headers['user-agent'];
@@ -13,21 +12,18 @@ function ensureLatestBrowser(req, res, next) {
     var browserVersion = fullBrowserVersion.split(".",1).toString();
     var browserVersionNumber = Number(browserVersion);
 
-    console.log(browserName);
-    console.log(browserVersion)
-
     if (browserName == 'IE')
-        res.redirect('/redirect');
+        res.redirect('/redirect?origin='+req.originalUrl);
     else if (browserName == 'Firefox')
-        res.redirect('/redirect');
+        res.redirect('/redirect?origin='+req.originalUrl);
     else if (browserName == 'Chrome')
-        res.redirect('/redirect');
+        res.redirect('/redirect?origin='+req.originalUrl);
     else if (browserName == 'Canary')
-        res.redirect('/redirect');
+        res.redirect('/redirect?origin='+req.originalUrl);
     else if (browserName == 'Safari')
-        res.redirect('/redirect');
+        res.redirect('/redirect?origin='+req.originalUrl);
     else if (browserName == 'Opera')
-        res.redirect('/redirect');
+        res.redirect('/redirect?origin='+req.originalUrl);
     else
         return next();
 }

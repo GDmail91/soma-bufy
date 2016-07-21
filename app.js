@@ -26,11 +26,10 @@ app.use(device.capture());
 var browser = require('./routes/browserCheck');
 
 app.get('/redirect', function(req, res, next) {
-  res.render('redirection');
+  res.render('redirection', { origin: req.query.origin });
 });
 
 app.all('*', function(req, res, next) {
-  console.log("실행안해?");
   browser(req, res, next);
 });
 
