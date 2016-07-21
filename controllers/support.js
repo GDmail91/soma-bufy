@@ -14,17 +14,23 @@ router.get('/:content_id', function(req, res, next) {
     async.waterfall([
         function(callback) {
             // TODO 유저 정보 가져옴
-            /*require('../models/users_model').getUserDataByToken(data, function (status, msg, data) {
-                if (status) callback(null, data.user_id);
+            require('../models/users_model').getUserDataByToken(data, function (status, msg, getData) {
+                if (status) {
+                    data.username = getData.username;
+                    data.user_id = getData.user_id;
+                    callback(null);
+                }
                 else callback(msg);
-            });*/
-            data.username = "유저명";
-            callback(null);
+            });
         }, function(callback) {
-            data.target = "후원 타이틀";
-            callback(null);
+            require('../models/monthly_model').getMonthlyContent(data, function (status, msg, getData) {
+                if (status) {
+                    data.content_title = getData.m_support_title;
+                    callback(null);
+                } else callback(msg);
+            });
         }, function(callback) {
-            data.support_id = "support_id";
+            data.support_id = "support_id:"+data.content_title+":"+data.user_id;
             callback(null);
         }
     ], function(err, result) {
@@ -39,7 +45,7 @@ router.get('/:content_id', function(req, res, next) {
         if (month < 10) month = "0"+month;
         var date = currentdate.getFullYear()+""+month+""+currentdate.getDate();
         res.statusCode = 200;
-        res.render('support', { support_id: data.support_id, username: data.username, target: data.target, date: date.toString() });
+        res.render('support', { support_id: data.support_id, username: data.username, content_title: data.content_title, date: date.toString() });
     });
 });
 

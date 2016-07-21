@@ -74,7 +74,7 @@ var monthly_model = {
     getMonthlyContent : function (data, callback) {
         pool.getConnection(function (err, connection) {
             var select = [];
-            connection.query("SELECT * FROM MonthlySupport " +
+            connection.query("SELECT m_support_content_id, m_support_title, description, m_support_img, end_date, post_date FROM MonthlySupport " +
                 "WHERE end_date >= NOW() " +
                 "ORDER BY m_support_content_id DESC", select, function (err, rows) {
                 if (err) {
