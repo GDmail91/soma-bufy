@@ -30,7 +30,7 @@ router.get('/:content_id', function(req, res, next) {
                 } else callback(msg);
             });
         }, function(callback) {
-            data.support_id = "support_id:"+data.content_title+":"+data.user_id;
+            data.support_id = "support_id:"+data.content_id+":"+data.user_id;
             callback(null);
         }
     ], function(err, result) {
