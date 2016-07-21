@@ -5,7 +5,7 @@ var express = require('express');
 var router = express.Router();
 var async = require('async');
 
-router.get('/', function(req, res, next) {
+router.get('/:content_id', function(req, res, next) {
     var data = {
         access_token : req.header('access-token'),
         content_id : req.params.content_id
@@ -37,7 +37,7 @@ router.get('/', function(req, res, next) {
         var currentdate = new Date();
         var date = currentdate.getFullYear()+""+currentdate.getDate()+""+(currentdate.getMonth()+1);
         res.statusCode = 200;
-        res.render('import', { support_id: data.support_id, username: data.username, target: data.target, date: date.toString() });
+        res.render('support', { support_id: data.support_id, username: data.username, target: data.target, date: date.toString() });
     });
 });
 
