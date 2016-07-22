@@ -3,6 +3,13 @@
  */
 var credentials = require('../credentials');
 
+var AWS = require('aws-sdk');
+AWS.config.update({
+    accessKeyId: credentials.aws.aws_access_key_id,
+    secretAccessKey: credentials.aws.aws_secret_access_key,
+    "region": "ap-northeast-2"
+});
+
 function uploadImage(req, data, callback) {
     var formidable = require('formidable');
     var form = new formidable.IncomingForm();
@@ -31,7 +38,6 @@ function uploadImage(req, data, callback) {
         }
 
         // S3 서버에 이미지 업로드
-        var AWS = require('aws-sdk');
         var fs = require('fs');
         var gm = require('gm').subClass({ imageMagick: true });
         var buffer = new Buffer(0);
@@ -47,11 +53,6 @@ function uploadImage(req, data, callback) {
             buffer = Buffer.concat([buffer, data]);
         });
         fileStream.on('end', function() {
-            AWS.config.update({
-                accessKeyId: credentials.aws.aws_access_key_id,
-                secretAccessKey: credentials.aws.aws_secret_access_key,
-                "region": "ap-northeast-2"
-            });
             var s3 = new AWS.S3();
 
             // image name hashing
@@ -143,7 +144,6 @@ function overwriteImage(req, data, origin_url, callback) {
         var overwrite_url = origin_url.split('.')[0] + mime_type;
 
         // S3 서버에 이미지 업로드
-        var AWS = require('aws-sdk');
         var fs = require('fs');
         var gm = require('gm').subClass({ imageMagick: true });
         var buffer = new Buffer(0);
@@ -159,11 +159,6 @@ function overwriteImage(req, data, origin_url, callback) {
             buffer = Buffer.concat([buffer, data]);
         });
         fileStream.on('end', function() {
-            AWS.config.update({
-                accessKeyId: credentials.aws.aws_access_key_id,
-                secretAccessKey: credentials.aws.aws_secret_access_key,
-                "region": "ap-northeast-2"
-            });
             var s3 = new AWS.S3();
 
             // bucket info & file info
@@ -214,12 +209,6 @@ function overwriteImage(req, data, origin_url, callback) {
 }
 
 function getImage(content_img, res) {
-    var AWS = require('aws-sdk');
-    AWS.config.update({
-        accessKeyId: credentials.aws.aws_access_key_id,
-        secretAccessKey: credentials.aws.aws_secret_access_key,
-        "region": "ap-northeast-2"
-    });
 
     // bucket info & file info
     var bucketName = 'soma-bufy-storage';
@@ -262,7 +251,6 @@ function uploadBannerImage(req, data, callback) {
         }
 
         // S3 서버에 이미지 업로드
-        var AWS = require('aws-sdk');
         var fs = require('fs');
         var gm = require('gm').subClass({ imageMagick: true });
         var buffer = new Buffer(0);
@@ -278,11 +266,6 @@ function uploadBannerImage(req, data, callback) {
             buffer = Buffer.concat([buffer, data]);
         });
         fileStream.on('end', function() {
-            AWS.config.update({
-                accessKeyId: credentials.aws.aws_access_key_id,
-                secretAccessKey: credentials.aws.aws_secret_access_key,
-                "region": "ap-northeast-2"
-            });
             var s3 = new AWS.S3();
 
             // image name hashing
@@ -352,7 +335,6 @@ function overwriteBannerImage(req, data, origin_url, callback) {
         var overwrite_url = origin_url.split('.')[0] + mime_type;
 
         // S3 서버에 이미지 업로드
-        var AWS = require('aws-sdk');
         var fs = require('fs');
         var gm = require('gm').subClass({ imageMagick: true });
         var buffer = new Buffer(0);
@@ -368,16 +350,11 @@ function overwriteBannerImage(req, data, origin_url, callback) {
             buffer = Buffer.concat([buffer, data]);
         });
         fileStream.on('end', function() {
-            AWS.config.update({
-                accessKeyId: credentials.aws.aws_access_key_id,
-                secretAccessKey: credentials.aws.aws_secret_access_key,
-                "region": "ap-northeast-2"
-            });
             var s3 = new AWS.S3();
 
             // bucket info & file info
             var bucketName = 'soma-bufy-storage';
-            var keyName = 'banner/images/'+overwrite_url;
+            var keyName = 'banner/'+overwrite_url;
 
             s3.putObject({
                 Bucket: bucketName,
@@ -401,16 +378,10 @@ function overwriteBannerImage(req, data, origin_url, callback) {
 }
 
 function getBannerImage(content_img, res) {
-    var AWS = require('aws-sdk');
-    AWS.config.update({
-        accessKeyId: credentials.aws.aws_access_key_id,
-        secretAccessKey: credentials.aws.aws_secret_access_key,
-        "region": "ap-northeast-2"
-    });
 
     // bucket info & file info
     var bucketName = 'soma-bufy-storage';
-    var keyName = 'banner/images/'+content_img;
+    var keyName = 'banner/'+content_img;
 
     var s3 = new AWS.S3();
 
