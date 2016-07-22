@@ -121,11 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="browserCheck.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="browserCheck.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/browserCheck.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.430839">
+              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -133,10 +133,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26757368">
+            <state vertical-scroll-proportion="0.0">
               <caret line="22" column="98" selection-start-line="22" selection-start-column="98" selection-end-line="22" selection-end-column="98" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
@@ -192,9 +192,9 @@
         <option value="$PROJECT_DIR$/controllers/reviews.js" />
         <option value="$PROJECT_DIR$/controllers/aws.js" />
         <option value="$PROJECT_DIR$/routes/route.js" />
-        <option value="$PROJECT_DIR$/routes/browserCheck.js" />
         <option value="$PROJECT_DIR$/models/ranking_model.js" />
         <option value="$PROJECT_DIR$/controllers/search.js" />
+        <option value="$PROJECT_DIR$/routes/browserCheck.js" />
       </list>
     </option>
   </component>
@@ -731,7 +731,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469202537485</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Add search function">
+      <created>1469204204413</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1469204204413</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TodoView">
@@ -797,7 +803,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change output of editing ranking content" />
     <MESSAGE value="Add Monthly support process" />
     <MESSAGE value="Add Contact" />
     <MESSAGE value="Add Contact validator" />
@@ -822,7 +827,8 @@
     <MESSAGE value="Add reviews" />
     <MESSAGE value="Delete Logs" />
     <MESSAGE value="Fix Mistake" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix Mistake" />
+    <MESSAGE value="Add search function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add search function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1239,16 +1245,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/browserCheck.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/ranking.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1275,8 +1271,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26757368">
+        <state vertical-scroll-proportion="0.0">
           <caret line="22" column="98" selection-start-line="22" selection-start-column="98" selection-end-line="22" selection-end-column="98" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/browserCheck.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.430839">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
           </folding>
