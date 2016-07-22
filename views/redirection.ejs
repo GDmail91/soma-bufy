@@ -3,10 +3,19 @@
     <!-- Other headers -->
     <meta property="al:android:app_name" content="백업포유" />
     <meta property="al:android:package" content="com.smd.soma_donation" />
-    <meta property="al:android:url" content="com.smd.soma_donation://bufy.mooo.com:3000/<%= origin %>" />
+    <meta property="al:android:url" content="soma_donation://bufy.mooo.com:3000/<%= origin %>" />
     <meta property="og:title" content="example page title" />
     <meta property="og:type" content="website" />
 </head>
 <!-- Other HTML content -->
+<body>
+<script type="text/javascript">
+
+    function applink() {
+        window.location.replace("somadonation://bufy.mooo.com:3000/<%= origin %>");
+    }
+
+</script>
+</body>
 </html>
 </head>
