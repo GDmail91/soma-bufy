@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="050da517-aae0-4612-82f3-90a2babe754e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/review_model.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/aws.js" afterPath="$PROJECT_DIR$/controllers/aws.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/reviews.js" afterPath="$PROJECT_DIR$/controllers/reviews.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/browserCheck.js" afterPath="$PROJECT_DIR$/routes/browserCheck.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/route.js" afterPath="$PROJECT_DIR$/routes/route.js" />
     </list>
     <ignored path="qinshihuang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="route.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="route.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/route.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6721698">
-              <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+            <state vertical-scroll-proportion="-3.3529413">
+              <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -134,11 +130,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="browserCheck.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="browserCheck.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/browserCheck.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.430839">
+              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -192,10 +188,10 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/views/redirection.ejs" />
         <option value="$PROJECT_DIR$/routes/route.js" />
-        <option value="$PROJECT_DIR$/routes/browserCheck.js" />
         <option value="$PROJECT_DIR$/models/review_model.js" />
         <option value="$PROJECT_DIR$/controllers/aws.js" />
         <option value="$PROJECT_DIR$/controllers/reviews.js" />
+        <option value="$PROJECT_DIR$/routes/browserCheck.js" />
       </list>
     </option>
   </component>
@@ -690,7 +686,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469177725426</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Add reviews">
+      <created>1469197505182</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1469197505182</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TodoView">
@@ -704,7 +706,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.203125" sideWeight="0.48044693" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32677597" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1191,16 +1193,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/browserCheck.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/review_model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1233,9 +1225,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/route.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6721698">
-          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+        <state vertical-scroll-proportion="-3.3529413">
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/browserCheck.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.430839">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
