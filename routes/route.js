@@ -7,7 +7,21 @@ var search = require('../controllers/search');
 var contact = require('../controllers/contact');
 var support = require('../controllers/support');
 
+var browser = require('./browserCheck');
+
 module.exports = function(app){
+  app.get('/redirect', function(req, res, next) {
+    if (req._parsedUrl.pathname.split('/')[1] != 'redirect') {
+      console.log("췍");
+      return next();
+    }
+    res.render('redirection', { origin: req.query.origin });
+  });
+
+  app.all('*', function(req, res, next) {
+    browser(req, res, next);
+  });
+
   //app.use('/reviews', reviews);
   //app.use('/search', search);
   //app.use('/auth', auth);

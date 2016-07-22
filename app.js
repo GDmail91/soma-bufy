@@ -21,19 +21,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // route handlers
-var browser = require('./routes/browserCheck');
-
-app.get('/redirect', function(req, res, next) {
-  if (req.originalUrl.split('/')[1] != 'redirect') {
-    return next();
-  }
-  res.render('redirection', { origin: req.query.origin });
-});
-
-app.all('*', function(req, res, next) {
-  browser(req, res, next);
-});
-
 require('./routes/route')(app);
 
 // catch 404 and forward to error handler
