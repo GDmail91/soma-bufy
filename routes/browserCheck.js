@@ -8,7 +8,7 @@ function ensureLatestBrowser(req, res, next) {
     var parser = new UAParser();
     var ua = req.headers['user-agent'];
 
-    if (req.originalUrl != '/redirect'
+    if ((req.originalUrl != '/redirect' || req.originalUrl != '/favicon')
     && typeof parser.setUA(ua).getBrowser().name != 'undefined'
     && typeof req.query.origin == 'undefined') {
         var browserName = parser.setUA(ua).getBrowser().name;
