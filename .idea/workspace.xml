@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="050da517-aae0-4612-82f3-90a2babe754e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/aws.js" afterPath="$PROJECT_DIR$/controllers/aws.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/redirection.ejs" afterPath="$PROJECT_DIR$/views/redirection.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/reviews.js" afterPath="$PROJECT_DIR$/controllers/reviews.js" />
     </list>
     <ignored path="qinshihuang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aws.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="aws.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/aws.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33900228">
-              <caret line="88" column="33" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="219" column="63" selection-start-line="219" selection-start-column="63" selection-end-line="219" selection-end-column="63" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -109,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reviews.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="reviews.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/reviews.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="243" column="24" selection-start-line="243" selection-start-column="24" selection-end-line="243" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.7630386">
+              <caret line="242" column="29" selection-start-line="242" selection-start-column="24" selection-end-line="242" selection-end-column="29" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -189,10 +188,10 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/route.js" />
         <option value="$PROJECT_DIR$/models/review_model.js" />
-        <option value="$PROJECT_DIR$/controllers/reviews.js" />
         <option value="$PROJECT_DIR$/routes/browserCheck.js" />
         <option value="$PROJECT_DIR$/views/redirection.ejs" />
         <option value="$PROJECT_DIR$/controllers/aws.js" />
+        <option value="$PROJECT_DIR$/controllers/reviews.js" />
       </list>
     </option>
   </component>
@@ -705,7 +704,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469197740664</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Delete Logs">
+      <created>1469198812197</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1469198812198</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TodoView">
@@ -771,7 +776,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix like count bug" />
     <MESSAGE value="Change standard rank sorting" />
     <MESSAGE value="Change output of editing ranking content" />
     <MESSAGE value="Add Monthly support process" />
@@ -796,7 +800,8 @@
     <MESSAGE value="Fix user agent check" />
     <MESSAGE value="Fix redirect process" />
     <MESSAGE value="Add reviews" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add reviews" />
+    <MESSAGE value="Delete Logs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete Logs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1184,20 +1189,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ranking.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="232" column="37" selection-start-line="232" selection-start-column="37" selection-end-line="232" selection-end-column="37" />
-          <folding>
-            <element signature="e#223#1340#0" expanded="false" />
-            <element signature="e#1391#2112#0" expanded="false" />
-            <element signature="e#2170#2946#0" expanded="false" />
-            <element signature="e#8596#9342#0" expanded="false" />
-            <element signature="e#9398#10203#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/route.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.3529413">
@@ -1234,20 +1225,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/reviews.js">
+    <entry file="file://$PROJECT_DIR$/controllers/aws.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="243" column="24" selection-start-line="243" selection-start-column="24" selection-end-line="243" selection-end-column="24" />
+          <caret line="219" column="63" selection-start-line="219" selection-start-column="63" selection-end-line="219" selection-end-column="63" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/aws.js">
+    <entry file="file://$PROJECT_DIR$/controllers/ranking.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33900228">
-          <caret line="88" column="33" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="232" column="37" selection-start-line="232" selection-start-column="37" selection-end-line="232" selection-end-column="37" />
+          <folding>
+            <element signature="e#223#1340#0" expanded="false" />
+            <element signature="e#1391#2112#0" expanded="false" />
+            <element signature="e#2170#2946#0" expanded="false" />
+            <element signature="e#8596#9342#0" expanded="false" />
+            <element signature="e#9398#10203#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/reviews.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7630386">
+          <caret line="242" column="29" selection-start-line="242" selection-start-column="24" selection-end-line="242" selection-end-column="29" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
           </folding>

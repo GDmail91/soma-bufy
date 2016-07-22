@@ -241,7 +241,7 @@ router.get('/:review_id', function(req, res, next) {
 });
 
 router.get('/:review_id/image', function(req, res, next) {
-    require('./aws').getBannerImage(req.query.content_img, res);
+    require('./aws').getBannerImage(req.query.banner_img, res);
 });
 
 module.exports = router;
