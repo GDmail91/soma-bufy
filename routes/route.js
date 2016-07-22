@@ -22,7 +22,6 @@ module.exports = function(app){
     browser(req, res, next);
   });
 
-  //app.use('/search', search);
   //app.use('/auth', auth);
   //app.use('/', ranking);
   app.use('/monthly', monthly);
@@ -31,4 +30,5 @@ module.exports = function(app){
   app.use('/reviews', reviews);
   app.use('/contact', contact);
   app.use('/support', support);
+  app.use('/search', search);
 };

@@ -297,6 +297,47 @@ var ranking_model = {
             });
         });
     },
+
+    getContentDataByTitle : function (data, callback) {
+        pool.getConnection(function (err, connection) {
+            var select=[];
+            var sql;
+            if (typeof data.access_token == 'undefined') {
+                sql = "SELECT content_id, content_user_id, content_title, description, content_img, like_count, view_count, post_date, is_finish " +
+                    "FROM RankContents ";
+            } else {
+                select.push(data.access_token);
+                sql = "SELECT content_id, content_user_id, content_title, description, content_img, like_count, view_count, post_date, is_finish, " +
+                    "(SELECT COUNT(like_content_id) FROM LikeTable WHERE like_user_id = User.user_id AND like_content_id = RankContents.content_id) AS is_like " +
+                    "FROM RankContents " +
+                    "INNER JOIN User ON User.token = ? ";
+            }
+            if (data.start_id == undefined) {
+                select.push(data.search);
+                select.push(data.amount);
+                sql += "WHERE content_title LIKE ? AND is_finish = 0 ORDER BY like_count DESC, view_count DESC LIMIT ? ";
+            } else {
+                select.push(data.search);
+                select.push(data.start_id);
+                select.push(data.amount);
+                sql += "WHERE content_title LIKE ? AND is_finish = 0 AND content_id <= ? ORDER BY like_count DESC, view_count DESC LIMIT ? ";
+            }
+
+            connection.query(sql, select, function (err, rows) {
+                if (err) {
+                    connection.release();
+                    return callback(false, "게시글 정보를 가져오는데 실패했습니다. 원인: " + err);
+                }
+                connection.release();
+
+                if (rows.length != 0) {
+                    return callback(true, "게시글 목록 가져옴", rows);
+                } else {
+                    return callback(false, "게시글 정보가 없습니다.");
+                }
+            });
+        });
+    },
 };
 
 module.exports = ranking_model;
