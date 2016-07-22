@@ -235,6 +235,197 @@ function getImage(content_img, res) {
     }).createReadStream().pipe(res);
 }
 
+function uploadBannerImage(req, data, callback) {
+    var formidable = require('formidable');
+    var form = new formidable.IncomingForm();
+
+    // 파일 폼 파싱
+    form.parse(req, function(err, fields, files) {
+        if (err) {
+            callback(false, "err");
+        }
+
+        console.log(files);
+        // set mime type
+        var mime_type = '';
+        switch (files.banner_img.type) {
+            case 'image/jpeg':
+                mime_type = '.jpg';
+                break;
+            case 'image/gif':
+                mime_type = '.gif';
+                break;
+            case 'image/png':
+                mime_type = '.png';
+                break;
+            default:
+                return callback(false, "이미지 타입 없음");
+                break;
+        }
+
+        // S3 서버에 이미지 업로드
+        var AWS = require('aws-sdk');
+        var fs = require('fs');
+        var gm = require('gm').subClass({ imageMagick: true });
+        var buffer = new Buffer(0);
+
+        // Read in the file, convert it to base64, store to S3
+        var fileStream = fs.createReadStream(files.banner_img.path);
+        fileStream.on('error', function (err) {
+            if (err) {
+                throw err;
+            }
+        });
+        fileStream.on('data', function (data) {
+            buffer = Buffer.concat([buffer, data]);
+        });
+        fileStream.on('end', function() {
+            AWS.config.update({
+                accessKeyId: credentials.aws.aws_access_key_id,
+                secretAccessKey: credentials.aws.aws_secret_access_key,
+                "region": "ap-northeast-2"
+            });
+            var s3 = new AWS.S3();
+
+            // image name hashing
+            var crypto = require('crypto');
+            var salt = Math.round((new Date().valueOf() * Math.random())) + "";
+            var image_name = crypto.createHash("sha256").update(files.banner_img.name + salt).digest("hex") + mime_type;
+
+            // bucket info & file info
+            var bucketName = 'soma-bufy-storage';
+            var keyName = 'banner/'+image_name;
+
+            s3.putObject({
+                Bucket: bucketName,
+                Key: keyName,
+                Body: buffer
+            }, function (err) {
+                if (err) { throw err; }
+                // Rest API 사진정보 전송
+                var dummy_data = {
+                    image_url: image_name,
+                    image_name: files.banner_img.name,
+                    review_content: fields.review_content,
+                    review_support_id: fields.review_support_id,
+                    review_title: fields.review_title
+                };
+
+                callback(true, "업로드 완료", dummy_data);
+            });
+        });
+    });
+}
+
+/**
+ * Overwrite Image on S3
+ * @param req
+ * @param data
+ * @param origin_url
+ * @param callback
+ */
+function overwriteBannerImage(req, data, origin_url, callback) {
+    var formidable = require('formidable');
+    var form = new formidable.IncomingForm();
+
+    // 파일 폼 파싱
+    form.parse(req, function(err, fields, files) {
+        if (err) {
+            callback(false, "err");
+        }
+
+        // set mime type
+        var mime_type = '';
+        switch (files.banner_img.type) {
+            case 'image/jpeg':
+                mime_type = '.jpg';
+                break;
+            case 'image/gif':
+                mime_type = '.gif';
+                break;
+            case 'image/png':
+                mime_type = '.png';
+                break;
+            default:
+                return callback(false, "이미지 타입 없음");
+                break;
+        }
+
+        var overwrite_url = origin_url.split('.')[0] + mime_type;
+
+        // S3 서버에 이미지 업로드
+        var AWS = require('aws-sdk');
+        var fs = require('fs');
+        var gm = require('gm').subClass({ imageMagick: true });
+        var buffer = new Buffer(0);
+
+        // Read in the file, convert it to base64, store to S3
+        var fileStream = fs.createReadStream(files.banner_img.path);
+        fileStream.on('error', function (err) {
+            if (err) {
+                throw err;
+            }
+        });
+        fileStream.on('data', function (data) {
+            buffer = Buffer.concat([buffer, data]);
+        });
+        fileStream.on('end', function() {
+            AWS.config.update({
+                accessKeyId: credentials.aws.aws_access_key_id,
+                secretAccessKey: credentials.aws.aws_secret_access_key,
+                "region": "ap-northeast-2"
+            });
+            var s3 = new AWS.S3();
+
+            // bucket info & file info
+            var bucketName = 'soma-bufy-storage';
+            var keyName = 'banner/images/'+overwrite_url;
+
+            s3.putObject({
+                Bucket: bucketName,
+                Key: keyName,
+                Body: buffer
+            }, function (err) {
+                if (err) { throw err; }
+                // Rest API 사진정보 전송
+                var dummy_data = {
+                    image_url: overwrite_url,
+                    image_name: files.banner_img.name,
+                    review_content: fields.review_content,
+                    review_support_id: fields.review_support_id,
+                    review_title: fields.review_title
+                };
+
+                callback(true, "업로드 완료", dummy_data);
+            });
+        });
+    });
+}
+
+function getBannerImage(content_img, res) {
+    var AWS = require('aws-sdk');
+    AWS.config.update({
+        accessKeyId: credentials.aws.aws_access_key_id,
+        secretAccessKey: credentials.aws.aws_secret_access_key,
+        "region": "ap-northeast-2"
+    });
+
+    // bucket info & file info
+    var bucketName = 'soma-bufy-storage';
+    var keyName = 'banner/images/'+content_img;
+
+    var s3 = new AWS.S3();
+
+    res.writeHead(200, {'Content-Type': 'image/*' });
+    s3.getObject({
+        Bucket: bucketName,
+        Key: keyName,
+    }).createReadStream().pipe(res);
+}
+
 module.exports.uploadImage = uploadImage;
 module.exports.overwriteImage = overwriteImage;
 module.exports.getImage = getImage;
+module.exports.uploadBannerImage = uploadBannerImage;
+module.exports.overwriteBannerImage = overwriteBannerImage;
+module.exports.getBannerImage = getBannerImage;

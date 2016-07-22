@@ -22,13 +22,13 @@ module.exports = function(app){
     browser(req, res, next);
   });
 
-  //app.use('/reviews', reviews);
   //app.use('/search', search);
   //app.use('/auth', auth);
   //app.use('/', ranking);
   app.use('/monthly', monthly);
   app.use('/users', users);
   app.use('/ranking', ranking);
+  app.use('/reviews', reviews);
   app.use('/contact', contact);
   app.use('/support', support);
 };
