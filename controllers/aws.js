@@ -13,7 +13,6 @@ function uploadImage(req, data, callback) {
             callback(false, "err");
         }
 
-        console.log(files);
         // set mime type
         var mime_type = '';
         switch (files.content_img.type) {
@@ -245,7 +244,6 @@ function uploadBannerImage(req, data, callback) {
             callback(false, "err");
         }
 
-        console.log(files);
         // set mime type
         var mime_type = '';
         switch (files.banner_img.type) {
