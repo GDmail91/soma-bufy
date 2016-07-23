@@ -16,8 +16,9 @@ router.get('/', function(req, res, next) {
 
     async.waterfall([
         function(callback) {
-            require('../models/alarm_model').setCheck(data, function (status, msg) {
-                if (status) callback(null);
+            // TODO 게시물 리스트 가져옴
+            require('../models/alarm_model').getAlarm(data, function(status, msg, data) {
+                if (status) callback(null, data);
                 else callback(msg);
             });
         }
