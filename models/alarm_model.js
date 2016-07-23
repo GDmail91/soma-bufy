@@ -103,7 +103,7 @@ var alarm_model = {
                     function (tran_callback) {
                         // TODO 기존 사용자 로그인중일시 재로그인 알림
                         var select = [data.access_token];
-                        var sql = "SELECT alarm_id, alarm_user_id, alarm_category, alarm_content_id, RC.content_title, RC.description, RC.content_img " +
+                        var sql = "SELECT alarm_id, alarm_user_id, alarm_category, alarm_content_id, alarm_date, is_check, RC.content_title, RC.description, RC.content_img " +
                             "FROM Alarm " +
                             "INNER JOIN RankContents AS RC " +
                             "ON Alarm.alarm_content_id = RC.content_id " +
