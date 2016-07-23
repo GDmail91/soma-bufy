@@ -20,8 +20,8 @@ function ensureLatestBrowser(req, res, next) {
             res.redirect('/redirect?origin=' + req.originalUrl);
         else if (browserName == 'Firefox')
             res.redirect('/redirect?origin=' + req.originalUrl);
-//        else if (browserName == 'Chrome')
-//            res.redirect('/redirect?origin=' + req.originalUrl);
+        else if (browserName == 'Chrome')
+            res.redirect('/redirect?origin=' + req.originalUrl);
         else if (browserName == 'Canary')
             res.redirect('/redirect?origin=' + req.originalUrl);
         else if (browserName == 'Safari')
