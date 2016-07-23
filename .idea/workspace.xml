@@ -28,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/controllers/ranking.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.3537415">
-              <caret line="340" column="84" selection-start-line="340" selection-start-column="84" selection-end-line="340" selection-end-column="84" />
+              <caret line="340" column="58" selection-start-line="340" selection-start-column="58" selection-end-line="340" selection-end-column="58" />
               <folding>
                 <element signature="e#2271#2992#0" expanded="false" />
                 <element signature="e#3050#3826#0" expanded="false" />
@@ -460,12 +460,6 @@
       <option name="number" value="Default" />
       <updated>1467992216881</updated>
     </task>
-    <task id="LOCAL-00009" summary="Add Monthly support process">
-      <created>1468825849424</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1468825849424</updated>
-    </task>
     <task id="LOCAL-00010" summary="Add Contact">
       <created>1468831385798</created>
       <option name="number" value="00010" />
@@ -754,7 +748,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469282114748</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Add alarm check">
+      <created>1469282242169</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1469282242169</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1291,7 +1291,7 @@
     <entry file="file://$PROJECT_DIR$/controllers/ranking.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3537415">
-          <caret line="340" column="84" selection-start-line="340" selection-start-column="84" selection-end-line="340" selection-end-column="84" />
+          <caret line="340" column="58" selection-start-line="340" selection-start-column="58" selection-end-line="340" selection-end-column="58" />
           <folding>
             <element signature="e#2271#2992#0" expanded="false" />
             <element signature="e#3050#3826#0" expanded="false" />
