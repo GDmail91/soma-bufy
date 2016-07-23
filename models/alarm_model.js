@@ -153,7 +153,7 @@ var alarm_model = {
 
     setCheck : function (data, callback) {
         pool.getConnection(function (err, connection) {
-            var select=[data.content_id];
+            var select=[data.is_check];
             var sql = "UPDATE Alarm SET is_check = 1 " +
                 "WHERE alarm_id = ? ";
 
