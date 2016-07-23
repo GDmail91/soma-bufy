@@ -338,7 +338,7 @@ router.get('/:content_id', function(req, res, next) {
         function(callback) {
             if(typeof data.is_check == 'undefined') return callback(null);
             else {
-                require('../models/alarm_model').getAlarm(data, function(status, msg, data) {
+                require('../models/alarm_model').setAlarm(data, function(status, msg) {
                     if (status) callback(null);
                     else callback(msg);
                 });
