@@ -338,6 +338,24 @@ var ranking_model = {
             });
         });
     },
+
+    increaseViewCount : function (data, callback) {
+        pool.getConnection(function (err, connection) {
+            var select=[data.content_id];
+            var sql = "UPDATE RankContents SET view_count = view_count + 1 " +
+                "WHERE content_id = ? ";
+
+            connection.query(sql, select, function (err) {
+                if (err) {
+                    connection.release();
+                    return callback(false, "조회수 증가에 실패했습니다. 원인: " + err);
+                }
+                connection.release();
+
+                return callback(true, "조회수 증가");
+            });
+        });
+    },
 };
 
 module.exports = ranking_model;

@@ -341,6 +341,12 @@ router.get('/:content_id', function(req, res, next) {
                 if (status) callback(null, data);
                 else callback(msg);
             });
+        },
+        function(getData, callback) {
+            require('../models/ranking_model').increaseViewCount(data, function (status, msg) {
+                if (status) callback(null, getData);
+                else callback(msg);
+            });
         }
     ], function(err, result) {
         if (err) {

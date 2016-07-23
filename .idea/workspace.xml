@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="050da517-aae0-4612-82f3-90a2babe754e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/alarm.js" afterPath="$PROJECT_DIR$/controllers/alarm.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/ranking.js" afterPath="$PROJECT_DIR$/controllers/ranking.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/ranking_model.js" afterPath="$PROJECT_DIR$/models/ranking_model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/browserCheck.js" afterPath="$PROJECT_DIR$/routes/browserCheck.js" />
     </list>
     <ignored path="qinshihuang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,13 +29,12 @@
       <file leaf-file-name="ranking.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/ranking.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.89229023">
-              <caret line="367" column="3" selection-start-line="367" selection-start-column="3" selection-end-line="367" selection-end-column="3" />
+            <state vertical-scroll-proportion="2.75">
+              <caret line="351" column="18" selection-start-line="351" selection-start-column="18" selection-end-line="351" selection-end-column="18" />
               <folding>
                 <element signature="e#2271#2992#0" expanded="false" />
                 <element signature="e#3050#3826#0" expanded="false" />
                 <element signature="e#9476#10222#0" expanded="false" />
-                <element signature="e#10278#11083#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -44,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/routes/browserCheck.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="42" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="42" />
+              <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -66,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/controllers/aws.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="210" column="18" selection-start-line="210" selection-start-column="18" selection-end-line="210" selection-end-column="18" />
+              <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -100,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/models/ranking_model.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="202" column="98" selection-start-line="202" selection-start-column="59" selection-end-line="202" selection-end-column="98" />
+              <caret line="341" column="21" selection-start-line="341" selection-start-column="4" selection-end-line="341" selection-end-column="21" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -182,16 +182,16 @@
         <option value="$PROJECT_DIR$/models/review_model.js" />
         <option value="$PROJECT_DIR$/views/redirection.ejs" />
         <option value="$PROJECT_DIR$/controllers/reviews.js" />
-        <option value="$PROJECT_DIR$/models/ranking_model.js" />
         <option value="$PROJECT_DIR$/controllers/search.js" />
         <option value="$PROJECT_DIR$/models/likes_model.js" />
         <option value="$PROJECT_DIR$/routes/route.js" />
         <option value="$PROJECT_DIR$/credentials.js" />
         <option value="$PROJECT_DIR$/fcm/fcm_control.js" />
         <option value="$PROJECT_DIR$/models/alarm_model.js" />
-        <option value="$PROJECT_DIR$/routes/browserCheck.js" />
         <option value="$PROJECT_DIR$/controllers/alarm.js" />
+        <option value="$PROJECT_DIR$/routes/browserCheck.js" />
         <option value="$PROJECT_DIR$/controllers/aws.js" />
+        <option value="$PROJECT_DIR$/models/ranking_model.js" />
         <option value="$PROJECT_DIR$/controllers/ranking.js" />
       </list>
     </option>
@@ -461,12 +461,6 @@
       <created>1467992216881</created>
       <option name="number" value="Default" />
       <updated>1467992216881</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Fix like count bug">
-      <created>1468781124433</created>
-      <option name="number" value="00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1468781124433</updated>
     </task>
     <task id="LOCAL-00006" summary="Change standard rank sorting">
       <created>1468814651361</created>
@@ -756,7 +750,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469277145894</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Add thumbnail down">
+      <created>1469277430901</created>
+      <option name="number" value="00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1469277430901</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TodoView">
@@ -770,7 +770,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.203125" sideWeight="0.48044693" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32677597" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -778,7 +778,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8021858" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.8021858" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18756531" sideWeight="0.51955307" order="2" side_tool="true" content_ui="tabs" />
@@ -898,7 +898,6 @@
             <element signature="e#2271#2992#0" expanded="false" />
             <element signature="e#3050#3826#0" expanded="false" />
             <element signature="e#9476#10222#0" expanded="false" />
-            <element signature="e#10278#11083#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1243,26 +1242,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/ranking_model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="202" column="98" selection-start-line="202" selection-start-column="59" selection-end-line="202" selection-end-column="98" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/browserCheck.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/alarm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1281,10 +1260,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/browserCheck.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/aws.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="210" column="18" selection-start-line="210" selection-start-column="18" selection-end-line="210" selection-end-column="18" />
+          <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ranking_model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="341" column="21" selection-start-line="341" selection-start-column="4" selection-end-line="341" selection-end-column="21" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
           </folding>
@@ -1293,13 +1292,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/ranking.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.89229023">
-          <caret line="367" column="3" selection-start-line="367" selection-start-column="3" selection-end-line="367" selection-end-column="3" />
+        <state vertical-scroll-proportion="2.75">
+          <caret line="351" column="18" selection-start-line="351" selection-start-column="18" selection-end-line="351" selection-end-column="18" />
           <folding>
             <element signature="e#2271#2992#0" expanded="false" />
             <element signature="e#3050#3826#0" expanded="false" />
             <element signature="e#9476#10222#0" expanded="false" />
-            <element signature="e#10278#11083#0" expanded="false" />
           </folding>
         </state>
       </provider>
