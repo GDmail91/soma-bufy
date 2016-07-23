@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="050da517-aae0-4612-82f3-90a2babe754e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/alarm.js" afterPath="$PROJECT_DIR$/controllers/alarm.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/ranking.js" afterPath="$PROJECT_DIR$/controllers/ranking.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/ranking_model.js" afterPath="$PROJECT_DIR$/models/ranking_model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/alarm_model.js" afterPath="$PROJECT_DIR$/models/alarm_model.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/browserCheck.js" afterPath="$PROJECT_DIR$/routes/browserCheck.js" />
     </list>
     <ignored path="qinshihuang.iws" />
@@ -29,8 +30,8 @@
       <file leaf-file-name="ranking.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/ranking.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.75">
-              <caret line="351" column="18" selection-start-line="351" selection-start-column="18" selection-end-line="351" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.4399093">
+              <caret line="344" column="13" selection-start-line="344" selection-start-column="13" selection-end-line="344" selection-end-column="13" />
               <folding>
                 <element signature="e#2271#2992#0" expanded="false" />
                 <element signature="e#3050#3826#0" expanded="false" />
@@ -56,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/controllers/alarm.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="89" selection-start-line="19" selection-start-column="89" selection-end-line="19" selection-end-column="89" />
+              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -78,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/models/alarm_model.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="122" column="44" selection-start-line="122" selection-start-column="36" selection-end-line="122" selection-end-column="44" />
+              <caret line="166" column="41" selection-start-line="166" selection-start-column="41" selection-end-line="166" selection-end-column="41" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -100,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/models/ranking_model.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="341" column="21" selection-start-line="341" selection-start-column="4" selection-end-line="341" selection-end-column="21" />
+              <caret line="357" column="6" selection-start-line="341" selection-start-column="4" selection-end-line="357" selection-end-column="6" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -187,11 +188,11 @@
         <option value="$PROJECT_DIR$/routes/route.js" />
         <option value="$PROJECT_DIR$/credentials.js" />
         <option value="$PROJECT_DIR$/fcm/fcm_control.js" />
-        <option value="$PROJECT_DIR$/models/alarm_model.js" />
-        <option value="$PROJECT_DIR$/controllers/alarm.js" />
         <option value="$PROJECT_DIR$/routes/browserCheck.js" />
         <option value="$PROJECT_DIR$/controllers/aws.js" />
         <option value="$PROJECT_DIR$/models/ranking_model.js" />
+        <option value="$PROJECT_DIR$/models/alarm_model.js" />
+        <option value="$PROJECT_DIR$/controllers/alarm.js" />
         <option value="$PROJECT_DIR$/controllers/ranking.js" />
       </list>
     </option>
@@ -461,12 +462,6 @@
       <created>1467992216881</created>
       <option name="number" value="Default" />
       <updated>1467992216881</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Change standard rank sorting">
-      <created>1468814651361</created>
-      <option name="number" value="00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1468814651361</updated>
     </task>
     <task id="LOCAL-00007" summary="Change output of editing ranking content">
       <created>1468819696642</created>
@@ -756,7 +751,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469277430901</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Add view count increase">
+      <created>1469281138364</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1469281138366</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TodoView">
@@ -778,7 +779,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.8021858" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8021858" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18756531" sideWeight="0.51955307" order="2" side_tool="true" content_ui="tabs" />
@@ -822,7 +823,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add upload process" />
     <MESSAGE value="Fix upload process" />
     <MESSAGE value="Delete console.log, And add encoding" />
     <MESSAGE value="Add Overwriting image of already posted when put content" />
@@ -847,7 +847,8 @@
     <MESSAGE value="Add alarm list" />
     <MESSAGE value="Fix mistake" />
     <MESSAGE value="Add thumbnail down" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add thumbnail down" />
+    <MESSAGE value="Add view count increase" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add view count increase" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1242,24 +1243,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/alarm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="89" selection-start-line="19" selection-start-column="89" selection-end-line="19" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/alarm_model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="122" column="44" selection-start-line="122" selection-start-column="36" selection-end-line="122" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/browserCheck.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1283,17 +1266,35 @@
     <entry file="file://$PROJECT_DIR$/models/ranking_model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="341" column="21" selection-start-line="341" selection-start-column="4" selection-end-line="341" selection-end-column="21" />
+          <caret line="357" column="6" selection-start-line="341" selection-start-column="4" selection-end-line="357" selection-end-column="6" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/alarm_model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="166" column="41" selection-start-line="166" selection-start-column="41" selection-end-line="166" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/alarm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/ranking.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.75">
-          <caret line="351" column="18" selection-start-line="351" selection-start-column="18" selection-end-line="351" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.4399093">
+          <caret line="344" column="13" selection-start-line="344" selection-start-column="13" selection-end-line="344" selection-end-column="13" />
           <folding>
             <element signature="e#2271#2992#0" expanded="false" />
             <element signature="e#3050#3826#0" expanded="false" />

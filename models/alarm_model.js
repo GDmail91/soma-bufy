@@ -149,7 +149,25 @@ var alarm_model = {
                 });
             });
         });
-    }
+    },
+
+    setCheck : function (data, callback) {
+        pool.getConnection(function (err, connection) {
+            var select=[data.content_id];
+            var sql = "UPDATE Alarm SET is_check = 1 " +
+                "WHERE alarm_id = ? ";
+
+            connection.query(sql, select, function (err) {
+                if (err) {
+                    connection.release();
+                    return callback(false, "읽기 실패했습니다. 원인: " + err);
+                }
+                connection.release();
+
+                return callback(true, "읽음");
+            });
+        });
+    },
 };
 
 module.exports = alarm_model;

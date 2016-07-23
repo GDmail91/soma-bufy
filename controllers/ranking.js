@@ -330,10 +330,20 @@ router.delete('/:content_id', function(req, res, next) {
 router.get('/:content_id', function(req, res, next) {
     var data = {
         access_token : req.header('access-token'),
-        content_id : req.params.content_id
+        content_id : req.params.content_id,
+        is_check : req.query.is_check
     };
 
     async.waterfall([
+        function(callback) {
+            if(typeof data.is_check == 'undefined') return callback(null);
+            else {
+                require('../models/alarm_model').getAlarm(data, function(status, msg, data) {
+                    if (status) callback(null);
+                    else callback(msg);
+                });
+            }
+        },
         function(callback) {
             // TODO 게시물 정보 가져옴
             // db registration
