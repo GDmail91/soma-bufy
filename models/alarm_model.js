@@ -103,8 +103,10 @@ var alarm_model = {
                     function (tran_callback) {
                         // TODO 기존 사용자 로그인중일시 재로그인 알림
                         var select = [data.access_token];
-                        var sql = "SELECT alarm_id, alarm_user_id, alarm_category, alarm_content_id " +
+                        var sql = "SELECT alarm_id, alarm_user_id, alarm_category, alarm_content_id, RC.content_title, RC.description, RC.content_img " +
                             "FROM Alarm " +
+                            "INNER JOIN RankContents AS RC " +
+                            "ON Alarm.alarm_content_id = RC.content_id " +
                             "WHERE alarm_user_id = (SELECT user_id FROM User WHERE User.token = ?) ";
                         if (data.start_id) {
                             select.push(data.start_id);
@@ -142,8 +144,8 @@ var alarm_model = {
                         });
                     }
                 ], function (err, result) {
-                    if (err) return callback(false, err)
-                    return callback(true, result);
+                    if (err) return callback(false, err);
+                    return callback(true, "알람 리스트", result);
                 });
             });
         });

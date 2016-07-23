@@ -9,6 +9,7 @@ module.exports = function(user_id, category, content_id, callback) {
     var fcm_data = {
         to: "/topics/"+user_id,
         data: {
+            message: category+"/"+content_id,
             category: category,
             content_id: content_id
         }

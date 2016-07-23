@@ -18,6 +18,8 @@ router.get('/', function(req, res, next) {
         function(callback) {
             // TODO 게시물 리스트 가져옴
             require('../models/alarm_model').getAlarm(data, function(status, msg, data) {
+                console.log(msg);
+                console.log(data);
                 if (status) callback(null, data);
                 else callback(msg);
             });
