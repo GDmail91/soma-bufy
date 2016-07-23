@@ -14,7 +14,7 @@ var pool = mysql.createPool({
     waitForConnections: false
 });
 
-var ranking_model = {
+var likes_model = {
 
     changeLike : function (data, callback) {
         // DB에 게시물 저장
@@ -329,4 +329,4 @@ var ranking_model = {
     },*/
 };
 
-module.exports = ranking_model;
+module.exports = likes_model;

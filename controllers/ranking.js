@@ -9,7 +9,8 @@ var async = require('async');
 router.post('/:content_id/likes', function(req, res, next) {
     var data = {
         access_token : req.header('access-token'),
-        content_id : req.params.content_id
+        content_id : req.params.content_id,
+        category : "ranking"
     };
 
     async.waterfall([
@@ -17,16 +18,32 @@ router.post('/:content_id/likes', function(req, res, next) {
             // TODO 유저 정보 가져옴
             // db registration
             require('../models/users_model').getUserDataByToken(data, function (status, msg, data) {
-                if (status) callback(null, data.user_id);
-                else callback(msg);
+                if (status) return callback(null, data.user_id);
+                else return callback(msg);
             });
 
         }, function(user_id, callback) {
             data.user_id = user_id;
             require('../models/likes_model').changeLike(data, function(status, msg, data) {
-                if (status) callback(null, data); // data에서 좋아요 변경한 결과값 반환
-                else callback(msg);
+                if (status) return callback(null, data); // data에서 좋아요 변경한 결과값 반환
+                else return callback(msg);
             });
+        }, function(like_result, callback) {
+            if (like_result) {
+                var fcm_control = require('../fcm/fcm_control');
+                fcm_control(data.user_id, data.category, data.content_id, function(err, httpResponse, body) {
+                    if(err) return callback(err);
+                    else return callback(null, like_result);
+                });
+            } else callback(null, like_result);
+        }, function(like_result, callback) {
+            if (like_result) {
+                require('../models/alarm_model').setAlarm(data, function (status, msg, data) {
+                    console.log(msg);
+                    if (status) return callback(null, like_result);
+                    else return callback(msg);
+                });
+            } else callback(null, like_result);
         }
     ], function(err, result) {
         if (err) {

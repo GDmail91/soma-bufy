@@ -6,6 +6,7 @@ var reviews = require('../controllers/reviews');
 var search = require('../controllers/search');
 var contact = require('../controllers/contact');
 var support = require('../controllers/support');
+var alarm = require('../controllers/alarm');
 
 var browser = require('./browserCheck');
 
@@ -31,4 +32,5 @@ module.exports = function(app){
   app.use('/contact', contact);
   app.use('/support', support);
   app.use('/search', search);
+  app.use('/alarm', alarm);
 };
