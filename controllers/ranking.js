@@ -363,4 +363,8 @@ router.get('/:content_id/image', function(req, res, next) {
     require('./aws').getImage(req.query.content_img, res);
 });
 
+router.get('/:content_id/thumbnail', function(req, res, next) {
+    require('./aws').getImage("thumb/"+req.query.content_img, res);
+});
+
 module.exports = router;
