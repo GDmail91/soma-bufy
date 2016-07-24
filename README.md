@@ -34,6 +34,12 @@ BUFY에 적용된 기술
 - **ua-parser-js :** API 서버이기 때문에 브라우저 접속 차단하기 위한 파서 사용
 - **validator :** 유효성 검사
 
+
+#### DB ER Diagram
+
+![Alt text](http://bufy.mooo.com/ranking/get/image?content_img=bufy_erd.png)
+
+
 #### MVC 구조
 Express 상에서 **MVC**패턴을 적용하였다.
 DB에 접속하여 데이터를 가져오기 위한 **Models**
